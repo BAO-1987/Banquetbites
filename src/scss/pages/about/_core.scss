@@ -1,0 +1,78 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.core {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+    @include media(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(mobile-l) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-big);
+    padding: clamp(16px, vw(24), 24px);
+    background-color: var(--color-white);
+
+    &::before {
+      content: "";
+      position: relative;
+      align-self: flex-end;
+      margin-bottom: 32px;
+      width: 64px;
+      height: 64px;
+      background-image: url("../images/icons/heart.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    &--customer {
+      &::before {
+        background-image: url("../images/icons/heart.svg");
+      }
+    }
+
+    &--quality {
+      &::before {
+        background-image: url("../images/icons/check.svg");
+      }
+    }
+
+    &--excelence {
+      &::before {
+        background-image: url("../images/icons/star.svg");
+      }
+    }
+
+    &--integrity {
+      &::before {
+        background-image: url("../images/icons/circle-check.svg");
+      }
+    }
+  }
+}
+
+@include media(mobile-l) {
+  br {
+    display: none;
+  }
+}

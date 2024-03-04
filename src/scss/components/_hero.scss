@@ -1,0 +1,83 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.hero {
+  position: relative;
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 55%;
+    background: var(--gradient);
+    inset: 0;
+    opacity: 0.79;
+
+    // @include media(tablet) {
+    //   width: 100%;
+    //   opacity: 0.9;
+    // }
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    // padding: 0 16px 0 clamp(16px, vw(64), 64px);
+    min-height: 646px;
+    z-index: 1;
+
+    // @include media(tablet-wide) {
+    //   background-size: cover;
+    // }
+
+    // @include media(mobile-m) {
+    //   padding: 20px;
+    // }
+  }
+
+  p {
+    margin-bottom: 1.6rem;
+    width: 100%;
+    max-width: 627px;
+    color: var(--color-blue-800);
+
+    @include media(tablet) {
+      max-width: 100%;
+    }
+  }
+
+  @include media(tablet) {
+    &__inner {
+      min-height: 442px;
+    }
+  }
+
+  @include media(mobile-m) {
+    .btn {
+      max-width: none;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  &--about,
+  &--services {
+    p {
+      margin-bottom: 0;
+      max-width: 567px;
+    }
+  }
+  &--product {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

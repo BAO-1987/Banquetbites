@@ -1,0 +1,33 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 16px;
+  width: 100%;
+  transition-property: transform, background-color;
+  transition-duration: 0.15s;
+
+  &__inner {
+    transition-property: box-shadow, background-color;
+    transition-duration: 0.15s;
+
+    @include media(tablet) {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+
+  &.hide {
+    transform: translateY(-200%);
+  }
+
+  &.scroll {
+    .header__inner {
+      box-shadow: 0 0 8px 0 var(--color-gray-100);
+      background-color: var(--color-white);
+    }
+  }
+}
