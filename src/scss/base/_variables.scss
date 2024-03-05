@@ -21,6 +21,7 @@
   // color
   --color-black: #000;
   --color-white: #fff;
+   --color-blue-400: #0D51FF;
   --color-violet-400: #45373d;
   --color-violet-50: #c9ada7;
   --color-gray-600:#5d5c61;
@@ -32,13 +33,17 @@
   // --radius-big: calc((var(--radius-main) * 2));
 
   // bg
-  --gradient: linear-gradient(
-  270deg,
-  rgba(241, 241, 241, 0.79) 0%,
-  rgba(241, 241, 241, 0.79) 49.75%,
-  rgba(241, 241, 241, 0.79) 49.9%,
-  rgba(241, 241, 241, 0.79) 100%
-);
+//   --gradient: linear-gradient(
+//   270deg,
+//   rgba(241, 241, 241, 0.79) 0%,
+//   rgba(241, 241, 241, 0.79) 49.75%,
+//   rgba(241, 241, 241, 0.79) 49.9%,
+//   rgba(241, 241, 241, 0.79) 100%
+// );
+
+--gradient:
+  linear-gradient(270.00deg, rgba(241, 241, 241, 0),rgb(241, 241, 241) 49.746%,rgb(241, 241, 241) 49.896%,rgb(241, 241, 241) 100%);
+
 
 --gradient-violet: linear-gradient(180deg, #c9ada7 0%, #442c13 100%);
 

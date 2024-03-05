@@ -2,9 +2,11 @@
 @use "../../utils/mixins/" as *;
 
 .reviews {
+  padding-bottom: 0;
+
   &__inner {
     border-radius: var(--radius-big);
-    padding: clamp(24px, vw(56), 56px) 103px;
+    padding: clamp(24px, vw(56), 56px) clamp(24px, vw(103), 103px);
     background-color: var(--color-orange-600);
   }
 
@@ -21,7 +23,7 @@
   &__item {
     display: flex;
     border-radius: var(--radius-big);
-    padding: 32px 34px 24px;
+    padding:  clamp(20px, vw(32), 32px) clamp(20px, vw(34), 34px) 24px;
     height: 100%;
     box-shadow: var(--shadow);
     background-color: var(--color-white);
@@ -43,11 +45,17 @@
       font-weight: var(--fw-700);
       font-size: 14px;
       line-height: 1.9;
+      text-transform: uppercase;
     }
 
     p {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       line-height: 1.4;
     }
+  }
+
+  h2 {
+    margin-bottom: 52px;
+    color: var(--color-white);
   }
 }

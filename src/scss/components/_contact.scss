@@ -2,30 +2,28 @@
 @use "../utils/mixins/" as *;
 
 .contact {
-  margin-bottom: 2.4rem;
-  border-radius: var(--radius-big);
-  min-height: 546px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: clamp(16px, vw(48), 48px) 0;
-
-  h2 {
-    margin-bottom: 0;
-    color: var(--color-white);
-
-    @include media(tablet) {
-      margin-bottom: 1rem;
-    }
-  }
+  padding: clamp(16px, vw(64), 64px) 0;
 
   &__inner {
+    border-radius: var(--radius-big);
+    min-height: 546px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    padding: clamp(20px, vw(64), 64px) 0 clamp(20px, vw(53), 53px);
+    max-width: 1010px;
     gap: 24px;
 
-    @include media(tablet) {
+    @include media(mobile-l) {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -38,6 +36,7 @@
 
     label {
       display: block;
+      background-color: var(--color-white);
 
       &:not(:last-child) {
         margin-bottom: 24px;
@@ -51,8 +50,8 @@
       padding: 10px 16px;
       width: 100%;
       height: 48px;
-      font-size: 16px;
-      line-height: 1;
+      font-size: 20px;
+      line-height: 1.4;
       background-color: var(--color-gray-100);
     }
 
@@ -62,7 +61,48 @@
     }
   }
 
-  .btn {
-    margin-top: 20px;
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    gap: 16px;
+
+    @include media(mobile-m) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: var(--color-blue-400);
+    gap: 10px;
+
+    &::before {
+      content: "";
+      position: relative;
+      width: 32px;
+      height: 32px;
+      background-image: url("../images/icons/email.svg");
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      color: var(--color-white);
+
+      @include media(tablet) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 0;
+    color: var(--color-white);
   }
 }

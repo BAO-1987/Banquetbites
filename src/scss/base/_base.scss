@@ -50,7 +50,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1010px;
+ max-width: 1042px;
 }
 
 .site-container {
@@ -61,7 +61,7 @@ body {
 }
 
 .main {
-  padding-top: var(--header-height) ;
+  padding-top: var(--header-height);
 }
 
 .background {
@@ -70,13 +70,12 @@ body {
 }
 
 .logo {
-  margin-right: 10px;
   width: 100%;
   max-width: 233px;
 
-  @include media(tablet-wide) {
-    max-width: 200px;
-  }
+//   @include media(tablet-wide) {
+//     max-width: 200px;
+//   }
 }
 
 .text {
