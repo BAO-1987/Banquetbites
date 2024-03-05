@@ -1,11 +1,13 @@
-@use "../../utils/functions/" as *;
-@use "../../utils/mixins/" as *;
+@use "../../utils/functions/"as *;
+@use "../../utils/mixins/"as *;
 
 .foods {
   margin-bottom: 32px;
+
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2.4rem;
     gap: 24px;
 
     @include media(mobile-l) {
@@ -21,6 +23,7 @@
     border-radius: 300px 300px var(--radius-big) var(--radius-big);
     padding: clamp(16px, vw(48), 48px);
     background-color: var(--color-white);
+    box-shadow: var(--shadow);
     gap: 1.6rem;
 
     h3 {

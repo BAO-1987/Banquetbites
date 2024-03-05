@@ -1,0 +1,46 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.blog {
+  margin-bottom: 32px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 2.4rem;
+    gap: 24px;
+
+    @include media(mobile-l) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    position: relative;
+    min-height: 444px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: var(--gradient-violet);
+      inset: 0;
+    }
+
+    h3 {
+      align-self: end;
+      font-size: 24px;
+      line-height: 1.5;
+      color: var(--color-white);
+    }
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+}

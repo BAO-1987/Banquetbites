@@ -23,7 +23,7 @@
 
   &:hover,
   &:focus {
-    border-color: var(--color-white);
+    // border-color: var(--color-white);
     color: var(--color-white);
     background-color: var(--color-orange-600);
   }
@@ -52,8 +52,8 @@
     // padding: clamp(18px, vw(29), 29px) 24px clamp(18px, vw(29), 29px) 24px;
     // min-width: max-content;
     // max-width: 116px;
-    color: var(--color-orange-600);
-    background-color: var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-orange-600);
 
     &:hover,
     &:focus {
