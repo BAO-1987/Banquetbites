@@ -14,15 +14,15 @@
     padding: 25px 0;
     font-size: 16px;
     line-height: 1.2;
+
+    @include media(mobile-m) {
+      flex-direction: column;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
-
-    @include media(mobile-m) {
-      flex-direction: column;
-    }
   }
 
   &__item {

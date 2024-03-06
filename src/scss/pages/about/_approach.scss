@@ -1,0 +1,26 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.approach {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box {
+    width: 100%;
+    max-width: 390px;
+
+    h2 {
+      margin-bottom: 32px;
+      font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
+    }
+
+  //   @include media(mobile-l) {
+  //     position: relative;
+  //     margin-bottom: 2rem;
+  //     max-width: 100%;
+  //     inset: 0;
+  //   }
+  }
+}

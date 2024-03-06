@@ -2,6 +2,8 @@
 @use "../utils/mixins/" as *;
 
 .hero {
+  $root: &;
+
   position: relative;
   background-position: top;
   background-size: contain;
@@ -31,9 +33,10 @@
     min-height: 646px;
     z-index: 1;
 
-    @include media(desktop) {
-      min-height: 550px;
+    @include media(tablet) {
+      min-height: 450px;
       background-size: cover;
+      justify-content: center;
     }
 
     // @include media(tablet) {
@@ -43,6 +46,12 @@
     // @include media(mobile-m) {
     //   padding: 20px;
     // }
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   h1 {
@@ -79,18 +88,32 @@
     }
   }
 
-  // &--about,
-  // &--services {
-  //   p {
-  //     margin-bottom: 0;
-  //     max-width: 567px;
-  //   }
-  // }
-  // &--product {
-  //   p {
-  //     margin-bottom: 0;
-  //   }
-  // }
+  &--about,
+  &--services {
+    &::before {
+      background: var(--gradient-second);
+      width: 42%;
+      opacity: 0.79;
+
+      @include media(tablet) {
+        // background-color: var(--color-white);
+        width: 100%;
+        // opacity: 0.8;
+      }
+    }
+
+    #{$root}__inner {
+      padding: clamp(20px, vw(94), 94px) 0;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &--product {
+    p {
+      margin-bottom: 0;
+    }
+  }
 
   @include media(tablet) {
     br {

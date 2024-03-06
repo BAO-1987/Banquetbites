@@ -8,8 +8,12 @@
     margin-bottom: 2.4rem;
     gap: 24px;
 
+    @include media(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     @include media(mobile-l) {
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: 1fr;
     }
   }
 
@@ -24,6 +28,20 @@
     box-shadow: var(--shadow);
     background-color: var(--color-white);
 
+    &:last-child {
+      @include media(tablet) {
+        grid-column: 2 span;
+        margin: 0 auto;
+        max-width: 400px;
+      }
+
+      @include media(mobile-l) {
+        grid-column: auto;
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+
     img {
       margin-bottom: 30px;
       border-radius: 50%;
@@ -35,6 +53,10 @@
       margin-bottom: 32px;
       font-size: clamp(18px, 1rem + 1.1111vi, 32px);
       text-align: center;
+    }
+
+    @include media(mobile-l) {
+      border-radius: var(--radius-big);
     }
   }
 

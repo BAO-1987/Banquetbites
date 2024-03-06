@@ -24,6 +24,7 @@
    --color-blue-400: #0D51FF;
   --color-violet-400: #45373d;
   --color-violet-50: #c9ada7;
+  --color-gray-400: #A8A8A8;
   --color-gray-600:#5d5c61;
   --color-gray-100: #f9f6f7;
   --color-orange-600: #ff9f1c;
@@ -43,6 +44,10 @@
 
 --gradient:
   linear-gradient(270.00deg, rgba(241, 241, 241, 0),rgb(241, 241, 241) 49.746%,rgb(241, 241, 241) 49.896%,rgb(241, 241, 241) 100%);
+
+  --gradient-second: linear-gradient(270.00deg, rgba(241, 241, 241, 0),rgba(241, 241, 241, 0.8),rgb(241, 241, 241) 0.01%,rgb(241, 241, 241) 100%);
+
+
 
 
 --gradient-violet: linear-gradient(180deg, #c9ada7 0%, #442c13 100%);

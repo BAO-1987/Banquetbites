@@ -1,0 +1,47 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.advantages {
+  &__list {
+    counter-reset: advantages-counter;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    @include media(tablet-wide) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media(mobile-l) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    counter-increment: advantages-counter;
+    border-radius: var(--radius-big);
+    padding: clamp(16px, vw(41), 41px);
+    box-shadow: var(--shadow);
+    background-color: var(--color-white);
+
+    &::before {
+      content: counter(advantages-counter, decimal-leading-zero);
+      position: relative;
+      display: block;
+      margin-bottom: 37px;
+      font-weight: var(--fw-800);
+      font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
+      line-height: 0.58;
+    }
+
+    h3 {
+      margin-bottom: 24px;
+      min-height: 58px;
+      font-size: 24px;
+    }
+
+    @include media(mobile-l) {
+      min-height: 230px;
+    }
+  }
+}
