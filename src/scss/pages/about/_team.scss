@@ -11,7 +11,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include media(mobile-l) {
+    @include media(mobile-m) {
       grid-template-columns: 1fr;
     }
   }
@@ -40,8 +40,25 @@
     }
 
     p {
-      font-size: 16px;
-      line-height: 1.2;
+      line-height: 1.5;
     }
+
+    &:last-child {
+      @include media(tablet) {
+        grid-column: 2 span;
+        margin: 0 auto;
+        max-width: 400px;
+      }
+
+      @include media(mobile-m) {
+        grid-column: auto;
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+  }
+
+  h2 {
+    font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
   }
 }

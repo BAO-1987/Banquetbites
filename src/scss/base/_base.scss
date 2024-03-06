@@ -38,7 +38,7 @@ body {
 }
 
 .section {
-  margin-bottom: 64px;
+  margin-bottom: clamp(32px, vw(64), 64px);
 }
 
 .container,

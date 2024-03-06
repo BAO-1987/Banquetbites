@@ -2,13 +2,15 @@
 @use "../../utils/mixins/" as *;
 
 .advantages {
+  padding: clamp(16px, vw(64), 64px) 0;
+
   &__list {
     counter-reset: advantages-counter;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 
-    @include media(tablet-wide) {
+    @include media(tablet) {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -40,8 +42,28 @@
       font-size: 24px;
     }
 
-    @include media(mobile-l) {
-      min-height: 230px;
+    p {
+      line-height: 1.4;
+    }
+
+    &:last-child {
+      @include media(tablet) {
+        grid-column: 2 span;
+        margin: 0 auto;
+        max-width: 350px;
+      }
+
+      @include media(mobile-l) {
+        grid-column: auto;
+        margin: 0;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    br {
+      display: none;
     }
   }
 }

@@ -5,9 +5,15 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include media(mobile-l) {
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
   }
 
   &__box {
+    padding: 32px 0;
     width: 100%;
     max-width: 390px;
 
@@ -16,11 +22,9 @@
       font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
     }
 
-  //   @include media(mobile-l) {
-  //     position: relative;
-  //     margin-bottom: 2rem;
-  //     max-width: 100%;
-  //     inset: 0;
-  //   }
+    @include media(mobile-l) {
+      padding: 0;
+      max-width: 100%;
+    }
   }
 }

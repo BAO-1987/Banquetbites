@@ -68,6 +68,10 @@
     }
   }
 
+  // @include media(desktop-xl) {
+  //   background-size: cover;
+  // }
+
   @include media(desktop) {
     background-size: cover;
   }
@@ -92,7 +96,7 @@
   &--services {
     &::before {
       background: var(--gradient-second);
-      width: 42%;
+      width: 43%;
       opacity: 0.79;
 
       @include media(tablet) {
@@ -105,13 +109,18 @@
     #{$root}__inner {
       padding: clamp(20px, vw(94), 94px) 0;
     }
+
     p {
       margin: 0;
     }
   }
-  &--product {
-    p {
-      margin-bottom: 0;
+
+  &--services {
+    margin-bottom: clamp(32px, vw(64), 64px);
+    
+    #{$root}__inner {
+      padding: 0;
+      justify-content: center;
     }
   }
 

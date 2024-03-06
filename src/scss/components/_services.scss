@@ -4,10 +4,6 @@
 .services {
   $root: &;
 
-  // h2 {
-  //   margin-bottom: 2.4rem;
-  // }
-
   &__grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -31,7 +27,10 @@
       overflow: hidden;
       border-radius: var(--radius-big);
       max-height: 370px;
-      width: 100%;
+
+      @include media(mobile-l) {
+        width: 100%;
+      }
     }
 
     @include media(mobile-l) {
@@ -43,17 +42,13 @@
     }
   }
 
-  // &--main {
-  //   margin-bottom: 0;
-  //   #{$root}__grid {
-  //     margin-bottom: 2.4rem;
-  //   }
-
-  //   h2 {
-  //     margin-bottom: 32px;
-  //     font-size: clamp(32px, 1.75rem + 0.625vi, 40px);
-  //   }
-  // }
+  &--main {
+    #{$root}__item {
+      img {
+        max-height: 100%;
+      }
+    }
+  }
 
   &__content {
     display: flex;
@@ -65,6 +60,25 @@
     height: 100%;
     background-color: var(--color-white);
     gap: 32px;
+
+    ul {
+      li {
+        padding-left: 30px;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          border-radius: 50%;
+          left: 15px;
+          top: 15px;
+          width: 4px;
+          height: 4px;
+          background-color:var(--color-black);
+        }
+
+      }
+    }
 
     @include media(mobile-l) {
       height: max-content;
