@@ -1,31 +1,33 @@
-// @use "../../utils/functions/" as *;
-// @use "../../utils/mixins/" as *;
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
 
-// .blog {
-//   &__list {
-//     display: grid;
-//     grid-auto-rows: minmax(min-content, auto);
-//     grid-template-columns: repeat(2, 1fr);
-//     gap: 24px;
+.blog {
+  padding: clamp(32px, vw(64), 64px) 0;
 
-//     @include media(mobile-l) {
-//       grid-template-columns: 1fr;
-//     }
-//   }
+  &__list {
+    display: grid;
+    grid-auto-rows: minmax(min-content, auto);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
 
-//   h1 {
-//     margin-bottom: 2.4rem;
-//     font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
-//   }
+    @include media(mobile-l) {
+      grid-template-columns: 1fr;
+    }
+  }
 
-//   h2 {
-//     margin-bottom: 24px;
-//     font-size: clamp(22px, 1.1528rem + 1.1111vi, 40px);
-//   }
+  h1 {
+    margin-bottom: 2.4rem;
+    font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
+  }
 
-//   @include media(mobile-m) {
-//     br {
-//       display: none;
-//     }
-//   }
-// }
+  h2 {
+    margin-bottom: 24px;
+    font-size: clamp(20px, 1rem + 1.1111vi, 32px);
+  }
+
+  @include media(mobile-m) {
+    br {
+      display: none;
+    }
+  }
+}

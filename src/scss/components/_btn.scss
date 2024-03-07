@@ -61,6 +61,29 @@
     }
   }
 
+  &--single {
+    height: 64px;
+    max-width: 64px;
+    border-color: transparent;
+    box-shadow: var(--shadow);
+
+    &::before {
+      @include mask;
+      width: 20px;
+      height: 21px;
+      mask-image: url("../images/icons/arrow-left.svg");
+      mask-position: 0 0;
+      background-color: var(--color-orange-600);
+    }
+
+    &:hover {
+      background-color: var(--color-orange-600);
+      &::before {
+        background-color: var(--color-white);
+      }
+    }
+  }
+
   &--slider {
     position: relative;
     z-index: 2;
