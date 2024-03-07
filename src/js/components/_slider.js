@@ -3,16 +3,17 @@ import Swiper, {
   Pagination,
 } from 'swiper';
 
-const swiperProduct = new Swiper('.product__slider', {
+const swiperProduct = new Swiper('.slider-swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
   modules: [Navigation, Pagination],
   draggable: true,
   grabCursor: true,
   navigation: {
-    nextEl: '.product .btn--next',
-    prevEl: '.product .btn--prev',
+    nextEl: '.slider-swiper .btn--next',
+    prevEl: '.slider-swiper .btn--prev',
   },
+  
   pagination: {
     el: '.swiper-pagination',
   },

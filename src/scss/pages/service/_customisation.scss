@@ -20,7 +20,9 @@
 
   &--assistance {
     #{$root}__inner {
-      flex-direction: column-reverse;
+      @include media(mobile-l) {
+        flex-direction: column-reverse;
+      }
     }
   }
 

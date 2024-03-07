@@ -1,0 +1,71 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.slider {
+  overflow: hidden;
+  margin-bottom: 64px;
+
+  &__list {
+    padding: 48px 0;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-big);
+    min-height: 664px;
+  }
+
+  &__content {
+    position: absolute;
+    top: 10px;
+    right: 35px;
+    padding: clamp(16px, vw(48), 48px) clamp(16px, vw(52), 52px);
+    width: 100%;
+    max-width: 493px;
+    background-color: var(--color-white);
+    border-radius: var(--radius-big);
+
+    h2 {
+      font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
+      margin-bottom: 24px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.swiper-pagination-bullet {
+  background: var(--color-violet-50);
+  &-active {
+    background: var(--color-orange-600);
+  }
+}
+
+.swiper-pagination {
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+  position: relative;
+  bottom: 12px;
+  z-index: 1;
+}
+
+.btn {
+  &.swiper-button-disabled {
+    background-color: var(--color-gray-600);
+    pointer-events: none;
+  }
+
+  &--prev {
+    left: 8px;
+    scale: -1 1;
+  }
+
+  &--next {
+    left: auto;
+    right: 8px;
+  }
+}

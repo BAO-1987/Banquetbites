@@ -44,10 +44,6 @@
     }
   }
 
-  .nav__link {
-    background-color: transparent;
-  }
-
   .nav__inner,
   .nav--footer {
     @include media(tablet) {

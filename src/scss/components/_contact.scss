@@ -3,6 +3,7 @@
 
 .contact {
   padding: clamp(16px, vw(64), 64px) 0;
+  background-color: var(--color-white);
 
   &__inner {
     border-radius: var(--radius-big);
