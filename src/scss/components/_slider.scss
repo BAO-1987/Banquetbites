@@ -18,13 +18,12 @@
     position: relative;
     overflow: hidden;
     border-radius: var(--radius-big);
-    min-height: 664px;
   }
 
   &__content {
     position: absolute;
-    top: 10px;
-    right: 35px;
+    top: 65px;
+    right: 101px;
     padding: clamp(16px, vw(48), 48px) clamp(16px, vw(52), 52px);
     width: 100%;
     max-width: 493px;
@@ -49,7 +48,11 @@
 }
 
 .swiper-pagination-bullet {
+  --swiper-pagination-bullet-horizontal-gap: 8px;
   background: var(--color-violet-50);
+  margin: 0;
+
+
   &-active {
     background: var(--color-orange-600);
   }
@@ -58,7 +61,7 @@
 .swiper-pagination {
 
   position: relative;
-  bottom: 12px !important;
+  bottom: 2px !important;
   z-index: 1;
 }
 
