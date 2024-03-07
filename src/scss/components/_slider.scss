@@ -3,7 +3,12 @@
 
 .slider {
   overflow: hidden;
-  margin-bottom: 64px;
+  // margin-bottom: 32px;
+  padding: 32px 0 48px;
+
+  &--weddings {
+    padding-top: 48px;
+  }
 
   &__list {
     padding: 48px 0;
@@ -37,6 +42,10 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  h2 {
+    margin-bottom: 32px;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -47,9 +56,9 @@
 }
 
 .swiper-pagination {
-  --swiper-pagination-bullet-horizontal-gap: 8px;
+
   position: relative;
-  bottom: 12px;
+  bottom: 12px !important;
   z-index: 1;
 }
 
@@ -65,7 +74,6 @@
   }
 
   &--next {
-    left: auto;
     right: 8px;
   }
 }

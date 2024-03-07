@@ -93,7 +93,8 @@
   }
 
   &--about,
-  &--services {
+  &--services,
+  &--gallery {
     &::before {
       background: var(--gradient-second);
       width: 43%;
@@ -121,6 +122,13 @@
     #{$root}__inner {
       padding: 0;
       justify-content: center;
+    }
+  }
+  &--gallery {
+    // margin-bottom: 48px;
+     #{$root}__inner {
+      justify-content: center;
+      padding: 0;
     }
   }
 
