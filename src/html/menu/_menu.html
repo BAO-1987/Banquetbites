@@ -1,0 +1,374 @@
+<section class="menu">
+
+  <ul class="menu__nav">
+    <li>
+      <a class="btn" href="#appetizers">
+        Appetizers
+      </a>
+    </li>
+
+    <li>
+      <a class="btn" href="#entrees">
+        Entrees
+      </a>
+    </li>
+
+    <li>
+      <a class="btn" href="#">
+        Sides and Accompaniments
+      </a>
+    </li>
+
+    <li>
+      <a class="btn" href="#">
+        Desserts
+      </a>
+    </li>
+
+    <li>
+      <a class="btn" href="#">
+        Beverages</a>
+    </li>
+  </ul>
+
+  <div class="tabs menu__inner">
+
+    <div class="tabs__panels">
+
+      <div class="menu__category" id="appetizers">
+        <div class="menu__content" id="сhicken">
+          <img src="./images/menu/appetizers/chicken.jpg" alt="Chicken fillet baked in bacon" width="652" height="342"
+            loading="lazy" />
+
+          <span>
+            222 Calories
+          </span>
+
+          <h2>
+            Chicken fillet baked in bacon
+          </h2>
+
+          <p>
+            A hot chicken meat appetizer fillet in smoked bacon in portions on small plates. For the convenience of
+            guests, they can be placed on skewers.
+          </p>
+
+          <ul>
+            <li>
+              Ingredients:
+            </li>
+
+            <li>
+              Сhicken meat
+            </li>
+
+            <li>
+              Smoked bacon
+            </li>
+
+            <li>
+              Lemon juice
+            </li>
+
+            <li>
+              Soy sauce
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="menu__content" id="potato">
+
+          <img src="./images/menu/appetizers/potato.jpg" alt="Potato croquettes with smoked cheese" width="652"
+            height="342" loading="lazy" />
+
+          <span>
+            180 Calories
+          </span>
+
+          <h2>
+            Potato croquettes with smoked cheese
+          </h2>
+
+          <p>
+            Crispy potato croquettes made with smoked cheese, which gives them a rich and rich flavour.
+          </p>
+
+          <ul>
+            <li>
+              Ingredients:
+            </li>
+
+            <li>
+              Potatoes
+            </li>
+
+            <li>
+              Smoked cheese
+            </li>
+
+            <li>
+              Lemon juice
+            </li>
+
+            <li>
+              Eggs
+            </li>
+
+            <li>
+              Bread crumbs
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu__content" id="mozzarella">
+
+          <img src="./images/menu/appetizers/mozzarella.jpg" alt="Caprese with mozzarella and cherry" width="652"
+            height="342" loading="lazy" />
+
+          <span>
+            180 Calories
+          </span>
+
+          <h2>
+            Caprese with mozzarella and cherry
+          </h2>
+
+          <p>
+            Tender mozzarella balls mixed with beautifully chopped cherry tomatoes, fresh basil and olive oil.
+          </p>
+
+          <ul>
+            <li>
+              Ingredients:
+            </li>
+
+            <li>
+              Mozzarella
+            </li>
+
+            <li>
+              Cherry tomatoes
+            </li>
+
+            <li>
+              Basil
+            </li>
+
+            <li>
+              Olive oil
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <div class="menu__category" id="entrees">
+        <div class="menu__content" id="tomato">
+          <img src="./images/menu/entrees/cream-soup.jpg" alt="Tomato cream soup with basil" width="652" height="342"
+            loading="lazy" />
+
+          <span>
+            180 Calories
+          </span>
+
+          <h2>
+            Tomato cream soup with basil
+          </h2>
+
+          <p>
+            Delicate creamy soup based on ripe tomatoes with the addition of fresh basil for flavor.
+          </p>
+
+          <ul>
+            <li>
+              Ingredients:
+            </li>
+
+            <li>
+              Tomatoes
+            </li>
+
+            <li>
+              Cream
+            </li>
+
+            <li>
+              Basil
+            </li>
+
+            <li>
+              Onion
+            </li>
+          </ul>
+
+        </div>
+
+        <div class="menu__content" id="rissoto">
+          <img src="./images/menu/entrees/risotto.jpg" alt="Risotto with mushrooms and truffles" width="652"
+            height="342" loading="lazy" />
+
+          <span>
+            220 Calories
+          </span>
+
+          <h2>
+            Risotto with mushrooms and truffles
+          </h2>
+
+          <p>
+            Italian risotto prepared on the basis of arborio rice with aromatic mushrooms and natural truffles.
+          </p>
+
+          <ul>
+            <li>
+              Ingredients:
+            </li>
+
+            <li>
+              Arborio rice
+            </li>
+
+            <li>
+              Mushrooms
+            </li>
+
+            <li>
+              Truffles
+            </li>
+
+            <li>
+              Onions
+            </li>
+          </ul>
+        </div>
+
+        <include src="./html/_menu-content.html" id="const" locals='{
+         "id": "start",
+          "images": "cake",
+           "title": "cake",
+        "desc": "ddd",
+        "calories": "calories",
+        "text": "triy",
+        "1": "1",
+        "2": "1",
+        "3": "1",
+        "4": "1"
+        }'></include>
+
+        <!-- <div class="menu__content" id="{id}">
+
+          <include src="./html/_footer.html"></include>
+
+           <img src="./images/menu/{jpg}" alt="{descr}" width="652"
+             height="342" loading="lazy" />
+
+           <span>
+             {calories} Calories
+           </span>
+
+           <h2>
+             {title}
+           </h2>
+
+           <p>
+             {text}
+           </p>
+
+           <ul>
+             <li>
+               Ingredients:
+             </li>
+
+             <li>
+               {1}
+             </li>
+
+             <li>
+              {2}
+             </li>
+
+             <li>
+             {3}
+             </li>
+
+             <li>
+              {4}
+             </li>
+           </ul>
+
+         </div> -->
+      </div>
+
+
+    </div>
+
+    <ul class="tabs__nav menu__thumbs">
+
+      <li>
+        <h2>
+          Hot Appetizers
+        </h2>
+      </li>
+
+      <li>
+        <img src="./images/menu/appetizers/chicken.jpg" alt="Chicken fillet baked in bacon" width="159" height="159"
+          loading="lazy" />
+
+        <div class="menu__descr">
+          <h3>
+            Chicken fillet baked in bacon
+          </h3>
+
+          <p>
+            A hot chicken meat appetizer fillet in smoked bakon in portions on small plates. For the convenienc...
+          </p>
+        </div>
+        <a href="#сhicken"></a>
+      </li>
+
+      <li>
+        <img src="./images/menu/appetizers/potato.jpg" alt="Сheesy potato croquettes" width="159" height="159"
+          loading="lazy" />
+
+        <div class="menu__descr">
+          <h3>
+            Сheesy potato croquettes
+          </h3>
+
+          <p>
+            Crispy potato croquettes made with smoked cheese, which gives them rich and rich flavour...
+          </p>
+        </div>
+        <a href="#potato"></a>
+      </li>
+
+      <li>
+        <h2>
+          Cold Appetizers
+        </h2>
+      </li>
+
+      <li>
+        <img src="./images/menu/appetizers/mozzarella.jpg" alt="Mozzarella Caprese" width="159" height="159"
+          loading="lazy" />
+
+        <div class="menu__descr">
+
+          <h3>
+            Mozzarella Caprese
+          </h3>
+
+          <p>
+            Tender mozzarella balls mixed with beautifully chopped cherry tomatoes, fretomatoes, fresh basil and olive
+            oil.
+          </p>
+
+        </div>
+        <a href="#mozzarella"></a>
+      </li>
+    </ul>
+
+  </div>
+
+</section>
