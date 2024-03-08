@@ -1,0 +1,66 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+// .info {
+//   background-color: var(--color-white);
+  
+//   &__list {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     margin-bottom: clamp(20px, vw(48), 48px);
+//     gap: 24px;
+
+//     @include media(mobile-l) {
+//       grid-template-columns: 1fr;
+//     }
+//   }
+
+//   &__item {
+//   }
+
+//   &__link {
+//     display: flex;
+//     align-items: center;
+//     font-size: clamp(14px, 0.6964rem + 0.8929vi, 24px);
+//     line-height: 1.2;
+//     color: var(--color-blue-400);
+//     gap: clamp(10px, vw(24), 24px);
+
+//     &::before {
+//       content: "";
+//       position: relative;
+//       display: block;
+//       width: 28px;
+//       height: 28px;
+//       background-position: 0 0;
+//       background-size: cover;
+//       background-repeat: no-repeat;
+//     }
+
+//     &--email {
+//       &::before {
+//         background-image: url("../images/icons/email.svg");
+//       }
+
+//       @include media(mobile-m) {
+//         flex-direction: column;
+//       }
+//     }
+
+//     &--phone {
+//       &::before {
+//         background-image: url("../images/icons/phone.svg");
+//       }
+
+//       @include media(mobile-m) {
+//         flex-direction: column;
+//       }
+//     }
+
+//     &--shedule {
+//       &::before {
+//         background-image: url("../images/icons/clock.svg");
+//       }
+//     }
+//   }
+// }

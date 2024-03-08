@@ -42,13 +42,19 @@
     }
   }
 
-  &--main {
+  &--main,
+  &--menu {
     #{$root}__item {
       img {
         max-height: 100%;
       }
     }
   }
+
+  &--menu {
+    background-color: var(--color-white);
+  }
+
 
   &__content {
     display: flex;

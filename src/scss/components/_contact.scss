@@ -27,6 +27,67 @@
       justify-content: center;
     }
   }
+    
+  &__list {
+   display: flex;
+   justify-content: center;
+    margin-bottom: clamp(20px, vw(48), 48px);
+    gap: 24px;
+
+    @include media(mobile-l) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-size: clamp(14px, 0.6964rem + 0.8929vi, 24px);
+    line-height: 1.2;
+    color: var(--color-blue-400);
+    gap: clamp(10px, vw(24), 24px);
+
+    &::before {
+      content: "";
+      position: relative;
+      display: block;
+      width: 28px;
+      height: 28px;
+      background-position: 0 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &--email {
+      &::before {
+        background-image: url("../images/icons/email.svg");
+      }
+
+      @include media(mobile-m) {
+        flex-direction: column;
+      }
+    }
+
+    &--phone {
+      &::before {
+        background-image: url("../images/icons/phone.svg");
+      }
+
+      @include media(mobile-m) {
+        flex-direction: column;
+      }
+    }
+
+    &--shedule {
+      &::before {
+        background-image: url("../images/icons/clock.svg");
+      }
+    }
+  }
+
 
   &__form {
     border-radius: var(--radius-big);
@@ -75,32 +136,32 @@
     }
   }
 
-  &__link {
-    display: flex;
-    align-items: center;
-    color: var(--color-blue-400);
-    gap: 10px;
+  // &__link {
+  //   display: flex;
+  //   align-items: center;
+  //   color: var(--color-blue-400);
+  //   gap: 10px;
 
-    &::before {
-      content: "";
-      position: relative;
-      width: 32px;
-      height: 32px;
-      background-image: url("../images/icons/email.svg");
-      background-position: 0 0;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+  //   &::before {
+  //     content: "";
+  //     position: relative;
+  //     width: 32px;
+  //     height: 32px;
+  //     background-image: url("../images/icons/email.svg");
+  //     background-position: 0 0;
+  //     background-size: cover;
+  //     background-repeat: no-repeat;
+  //   }
 
-    h2 {
-      margin-bottom: 0;
-      color: var(--color-white);
+  //   h2 {
+  //     margin-bottom: 0;
+  //     color: var(--color-white);
 
-      @include media(tablet) {
-        margin-bottom: 1rem;
-      }
-    }
-  }
+  //     @include media(tablet) {
+  //       margin-bottom: 1rem;
+  //     }
+  //   }
+  // }
 
   h2 {
     margin-bottom: 0;

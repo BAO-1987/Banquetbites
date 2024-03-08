@@ -26,6 +26,12 @@
     }
   }
 
+  &--proccess {
+      #{$root}__list {
+        max-width: 493px;
+      }
+  }
+
   &__list {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
@@ -48,5 +54,18 @@
       font-size: 20px;
       line-height: 1.5;
     }
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: var(--radius-big);
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  span {
+    font-weight: var(--fw-800);
   }
 }

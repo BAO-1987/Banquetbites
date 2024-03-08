@@ -4,10 +4,13 @@
 .footer {
   &__top {
     padding: clamp(20px, vw(48), 48px) 0;
-    background-color: var(--color-gray-100);
   }
 
   &__bottom {
+    background-color: var(--color-white);
+  }
+
+  &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;

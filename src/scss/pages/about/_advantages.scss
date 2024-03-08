@@ -2,6 +2,8 @@
 @use "../../utils/mixins/" as *;
 
 .advantages {
+  $root: &;
+
   padding: clamp(16px, vw(64), 64px) 0;
 
   &__list {
@@ -64,6 +66,12 @@
   @include media(tablet) {
     br {
       display: none;
+    }
+  }
+
+  &--menu {
+    #{$root}__list {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
