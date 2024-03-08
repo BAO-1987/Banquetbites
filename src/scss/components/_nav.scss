@@ -18,12 +18,15 @@
     display: flex;
     align-items: center;
     margin-right: clamp(16px, vw(48), 48px);
-
   }
 
   &__item {
     &:not(:last-of-type) {
       margin-right: clamp(10px, vw(32), 32px);
+
+      @include media(tablet) {
+        margin-right: 0;
+      }
     }
 
     @include media(tablet) {
@@ -41,13 +44,13 @@
     }
 
     &.true {
-      color: var(--orange-600);
+      color: var(--color-orange-600);
     }
   }
 
   &__btns {
     display: flex;
-    gap:16px;
+    gap: 16px;
 
     @include media(tablet) {
       flex-direction: column;

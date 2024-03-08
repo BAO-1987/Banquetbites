@@ -3,15 +3,10 @@
 
 .slider {
   overflow: hidden;
-  // margin-bottom: 32px;
-  padding: 32px 0 48px;
-
-  &--weddings {
-    padding-top: 48px;
-  }
+  padding: clamp(16px, vw(32), 32px) 0 clamp(16px, vw(48), 48px);
 
   &__list {
-    padding: 48px 0;
+    padding: clamp(16px, vw(48), 48px) 0;
   }
 
   &__item {
@@ -22,17 +17,27 @@
 
   &__content {
     position: absolute;
-    top: 65px;
-    right: 101px;
+    right: clamp(5px, vw(101), 101px);
+    top: clamp(5px, vw(65), 65px);
+    border-radius: var(--radius-big);
     padding: clamp(16px, vw(48), 48px) clamp(16px, vw(52), 52px);
     width: 100%;
     max-width: 493px;
     background-color: var(--color-white);
-    border-radius: var(--radius-big);
 
     h2 {
-      font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
       margin-bottom: 24px;
+      font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
+    }
+
+    @include media(mobile-l) {
+      margin: 0 auto;
+      inset: 0;
+    }
+
+    @include media(mobile-m) {
+      position: relative;
+      max-width: 100%;
     }
   }
 
@@ -43,40 +48,47 @@
   }
 
   h2 {
-    margin-bottom: 32px;
-  }
-}
-
-.swiper-pagination-bullet {
-  --swiper-pagination-bullet-horizontal-gap: 8px;
-  background: var(--color-violet-50);
-  margin: 0;
-
-
-  &-active {
-    background: var(--color-orange-600);
-  }
-}
-
-.swiper-pagination {
-
-  position: relative;
-  bottom: 2px !important;
-  z-index: 1;
-}
-
-.btn {
-  &.swiper-button-disabled {
-    background-color: var(--color-gray-600);
-    pointer-events: none;
+    margin-bottom: 1.6rem;
   }
 
-  &--prev {
-    left: 8px;
-    scale: -1 1;
+  .btn {
+    &.swiper-button-disabled {
+      background-color: var(--color-gray-600);
+      pointer-events: none;
+    }
+
+    &--prev {
+      left: 8px;
+      scale: -1 1;
+    }
+
+    &--next {
+      right: 8px;
+    }
+
+    @include media(mobile-m) {
+      display: none;
+    }
   }
 
-  &--next {
-    right: 8px;
+  .swiper-pagination-bullet {
+    --swiper-pagination-bullet-horizontal-gap: 8px;
+
+    margin: 0;
+    background: var(--color-violet-50);
+
+    &-active {
+      background: var(--color-orange-600);
+    }
+  }
+
+  .swiper-pagination {
+    position: relative;
+    bottom: 2px !important;
+    z-index: 1;
+  }
+
+  &--weddings {
+    padding-top: clamp(16px, vw(48), 48px);
   }
 }

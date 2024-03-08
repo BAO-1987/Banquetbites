@@ -55,7 +55,8 @@
 
   .nav__list {
     @include media(mobile-m) {
-      flex-direction: column;
+      display: block;
+      column-count: 2;
       margin: 0 auto;
     }
   }
@@ -63,6 +64,12 @@
   .nav__btns {
     @include media(tablet) {
       flex-direction: row;
+    }
+  }
+
+  .logo {
+    @include media(tablet) {
+      margin-bottom: 20px;
     }
   }
 }
