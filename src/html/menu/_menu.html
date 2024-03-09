@@ -14,19 +14,19 @@
     </li>
 
     <li>
-      <a class="btn" href="#">
+      <a class="btn" href="#sides">
         Sides and Accompaniments
       </a>
     </li>
 
     <li>
-      <a class="btn" href="#">
+      <a class="btn" href="#desserts">
         Desserts
       </a>
     </li>
 
     <li>
-      <a class="btn" href="#">
+      <a class="btn" href="#beverages">
         Beverages</a>
     </li>
   </ul>
@@ -36,337 +36,500 @@
     <div class="tabs__panels">
 
       <div class="menu__category" id="appetizers">
-        <div class="menu__content" id="сhicken">
-          <img src="./images/menu/appetizers/chicken.jpg" alt="Chicken fillet baked in bacon" width="652" height="342"
-            loading="lazy" />
 
-          <span>
-            222 Calories
-          </span>
+        <include src="./html/_menu-content.html" locals='{
+        "id": "chicken",
+        "images": "chicken",
+        "title": "Chicken fillet baked in bacon",
+        "desc": "Chicken fillet baked in bacon",
+        "calories": "222",
+        "text": "A hot chicken meat appetizer fillet in smoked bacon in portions on small plates. For the convenience of guests, they can be placed on skewers.",
+        "1": "Сhicken meat",
+        "2": "Smoked bacon",
+        "3": "Lemon juice",
+        "4": "Soy sauce"
+        }'></include>
 
-          <h2>
-            Chicken fillet baked in bacon
-          </h2>
+        <include src="./html/_menu-content.html" locals='{
+        "id": "potato",
+        "images": "potato",
+        "title": "Potato croquettes with smoked cheese",
+        "desc": "Potato croquettes with smoked cheese",
+        "calories": "180",
+        "text": "Crispy potato croquettes made with smoked cheese, which gives them a rich and rich flavour.",
+        "1": "Potatoes",
+        "2": "Smoked cheese",
+        "3": "Eggs",
+        "4": "Bread crumbs"
+        }'></include>
 
-          <p>
-            A hot chicken meat appetizer fillet in smoked bacon in portions on small plates. For the convenience of
-            guests, they can be placed on skewers.
-          </p>
+        <include src="./html/_menu-content.html" locals='{
+        "id": "mozzarella",
+        "images": "mozzarella",
+        "title": "Caprese with mozzarella and cherry",
+        "desc": "Caprese with mozzarella and cherry",
+        "calories": "180",
+        "text": "Tender mozzarella balls mixed with beautifully chopped cherry tomatoes, fresh basil and olive oil.",
+        "1": "Mozzarella",
+        "2": "Cherry tomatoes",
+        "3": "Basil",
+        "4": "Olive oil"
+        }'></include>
 
-          <ul>
-            <li>
-              Ingredients:
-            </li>
-
-            <li>
-              Сhicken meat
-            </li>
-
-            <li>
-              Smoked bacon
-            </li>
-
-            <li>
-              Lemon juice
-            </li>
-
-            <li>
-              Soy sauce
-            </li>
-          </ul>
-
-        </div>
-
-        <div class="menu__content" id="potato">
-
-          <img src="./images/menu/appetizers/potato.jpg" alt="Potato croquettes with smoked cheese" width="652"
-            height="342" loading="lazy" />
-
-          <span>
-            180 Calories
-          </span>
-
-          <h2>
-            Potato croquettes with smoked cheese
-          </h2>
-
-          <p>
-            Crispy potato croquettes made with smoked cheese, which gives them a rich and rich flavour.
-          </p>
-
-          <ul>
-            <li>
-              Ingredients:
-            </li>
-
-            <li>
-              Potatoes
-            </li>
-
-            <li>
-              Smoked cheese
-            </li>
-
-            <li>
-              Lemon juice
-            </li>
-
-            <li>
-              Eggs
-            </li>
-
-            <li>
-              Bread crumbs
-            </li>
-          </ul>
-        </div>
-
-        <div class="menu__content" id="mozzarella">
-
-          <img src="./images/menu/appetizers/mozzarella.jpg" alt="Caprese with mozzarella and cherry" width="652"
-            height="342" loading="lazy" />
-
-          <span>
-            180 Calories
-          </span>
-
-          <h2>
-            Caprese with mozzarella and cherry
-          </h2>
-
-          <p>
-            Tender mozzarella balls mixed with beautifully chopped cherry tomatoes, fresh basil and olive oil.
-          </p>
-
-          <ul>
-            <li>
-              Ingredients:
-            </li>
-
-            <li>
-              Mozzarella
-            </li>
-
-            <li>
-              Cherry tomatoes
-            </li>
-
-            <li>
-              Basil
-            </li>
-
-            <li>
-              Olive oil
-            </li>
-          </ul>
-
-        </div>
       </div>
 
       <div class="menu__category" id="entrees">
-        <div class="menu__content" id="tomato">
-          <img src="./images/menu/entrees/cream-soup.jpg" alt="Tomato cream soup with basil" width="652" height="342"
-            loading="lazy" />
 
-          <span>
-            180 Calories
-          </span>
-
-          <h2>
-            Tomato cream soup with basil
-          </h2>
-
-          <p>
-            Delicate creamy soup based on ripe tomatoes with the addition of fresh basil for flavor.
-          </p>
-
-          <ul>
-            <li>
-              Ingredients:
-            </li>
-
-            <li>
-              Tomatoes
-            </li>
-
-            <li>
-              Cream
-            </li>
-
-            <li>
-              Basil
-            </li>
-
-            <li>
-              Onion
-            </li>
-          </ul>
-
-        </div>
-
-        <div class="menu__content" id="rissoto">
-          <img src="./images/menu/entrees/risotto.jpg" alt="Risotto with mushrooms and truffles" width="652"
-            height="342" loading="lazy" />
-
-          <span>
-            220 Calories
-          </span>
-
-          <h2>
-            Risotto with mushrooms and truffles
-          </h2>
-
-          <p>
-            Italian risotto prepared on the basis of arborio rice with aromatic mushrooms and natural truffles.
-          </p>
-
-          <ul>
-            <li>
-              Ingredients:
-            </li>
-
-            <li>
-              Arborio rice
-            </li>
-
-            <li>
-              Mushrooms
-            </li>
-
-            <li>
-              Truffles
-            </li>
-
-            <li>
-              Onions
-            </li>
-          </ul>
-        </div>
-
-        <include src="./html/_menu-content.html" id="const" locals='{
-         "id": "start",
-          "images": "cake",
-           "title": "cake",
-        "desc": "ddd",
-        "calories": "calories",
-        "text": "triy",
-        "1": "1",
-        "2": "1",
-        "3": "1",
-        "4": "1"
+        <include src="./html/_menu-content.html" locals='{
+        "id": "tomato",
+        "images": "tomato",
+        "title": "Tomato cream soup with basil",
+        "desc": "Tomato cream soup with basil",
+        "calories": "180",
+        "text": "Delicate creamy soup based on ripe tomatoes with the addition of fresh basil for flavor.",
+        "1": "Tomatoes",
+        "2": "Cream",
+        "3": "Basil",
+        "4": "Onion"
         }'></include>
 
-        <!-- <div class="menu__content" id="{id}">
+        <include src="./html/_menu-content.html" locals='{
+        "id": "risotto",
+        "images": "risotto",
+        "title": "Risotto with mushrooms and truffles",
+        "desc": "Risotto with mushrooms and truffles",
+        "calories": "180",
+        "text": "Italian risotto prepared on the basis of arborio rice with aromatic mushrooms and natural truffles.",
+        "1": "Arborio rice",
+        "2": "Mushrooms",
+        "3": "Truffles",
+        "4": "Onions"
+        }'></include>
 
-          <include src="./html/_footer.html"></include>
+        <include src="./html/_menu-content.html" locals='{
+        "id": "onion",
+        "images": "onion",
+        "title": "Onion soup with cheese croutons",
+        "desc": "Onion soup with cheese croutons",
+        "calories": "200",
+        "text": "Tender mozzarella balls mixed with beautifully chopped cherry tomatoes, fresh basil and olive oil.",
+        "1": "Onion",
+        "2": "Cream",
+        "3": "Cheese",
+        "4": "Bread"
+        }'></include>
 
-           <img src="./images/menu/{jpg}" alt="{descr}" width="652"
-             height="342" loading="lazy" />
-
-           <span>
-             {calories} Calories
-           </span>
-
-           <h2>
-             {title}
-           </h2>
-
-           <p>
-             {text}
-           </p>
-
-           <ul>
-             <li>
-               Ingredients:
-             </li>
-
-             <li>
-               {1}
-             </li>
-
-             <li>
-              {2}
-             </li>
-
-             <li>
-             {3}
-             </li>
-
-             <li>
-              {4}
-             </li>
-           </ul>
-
-         </div> -->
       </div>
 
+      <div class="menu__category" id="sides">
 
+        <include src="./html/_menu-content.html" locals='{
+        "id": "buckwheat",
+        "images": "buckwheat",
+        "title": "Buckwheat with vegetables",
+        "desc": "Buckwheat with vegetables",
+        "calories": "200",
+        "text": "Nutritious buckwheat with a mix of fresh vegetables: carrots, peppers and onions.",
+        "1": "Buckwheat",
+        "2": "Carrots",
+        "3": "Peppers",
+        "4": "Onions"
+        }'></include>
+
+        <include src="./html/_menu-content.html" locals='{
+        "id": "potatoes",
+        "images": "potatoes",
+        "title": "Potato wedges with rosemary",
+        "desc": "Potato wedges with rosemary",
+        "calories": "200",
+        "text": "Crispy potato wedges potato wedgesbaked with aromatic rosemary and salt.",
+        "1": "Potatoes",
+        "2": "Rosemary",
+        "3": "Butter",
+        "4": "Salt"
+        }'></include>
+
+        <include src="./html/_menu-content.html" locals='{
+        "id": "pumpkin",
+        "images": "pumpkin",
+        "title": "Baked pumpkin with honey and walnuts",
+        "desc": "Baked pumpkin with honey and walnuts",
+        "calories": "200",
+        "text": "Tender pumpkin baked in the oven with honey and served with crunchy walnuts.",
+        "1": "Pumpkin",
+        "2": "Honey",
+        "3": "Walnuts",
+        "4": "Butter"
+        }'></include>
+
+      </div>
+
+      <div class="menu__category" id="desserts">
+        <include src="./html/_menu-content.html" locals='{
+        "id": "cake",
+        "images": "cake",
+        "title": "Chocolate cake “Soft tender”",
+        "desc": "Chocolate cake Soft tender",
+        "calories": "200",
+        "text": "Delicate chocolate sponge cake soaked in syrup, with delicate Belgian chocolate cream.",
+        "1": "Chocolate",
+        "2": "Flour",
+        "3": "Eggs",
+        "4": "Milk"
+        }'></include>
+
+        <include src="./html/_menu-content.html" locals='{
+        "id": "carrot",
+        "images": "carrot",
+        "title": "Carrot cake “Oven of a true artist”",
+        "desc": "Carrot cake Oven of a true artist",
+        "calories": "250",
+        "text": "Juicy carrot cake with raisins, cream cheese and nuts, seasoned with aromatic cinnamon.",
+        "1": "Carrots",
+        "2": "Flour",
+        "3": "Sugar",
+        "4": "Cream cheese"
+        }'></include>
+
+        <include src="./html/_menu-content.html" locals='{
+        "id": "bagel",
+        "images": "bagel",
+        "title": "Bagel with cinnamon and sugar",
+        "desc": "Bagel with cinnamon and sugar",
+        "calories": "180",
+        "text": "Crispy and aromatic bagel with vanilla sugar and aromatic cinnamon.",
+        "1": "Pumpkin",
+        "2": "Honey",
+        "3": "Walnuts",
+        "4": "Butter"
+        }'></include>
+
+      </div>
+
+      <div class="menu__category" id="beverages">
+        <include src="./html/_menu-content.html" locals='{
+        "id": "latte",
+        "images": "latte",
+        "title": "Ice latte",
+        "desc": "Ice latte",
+        "calories": "120",
+        "text": "A refreshing drink based on espresso with the addition of milk and caramel syrup, served with ice cubes.",
+        "1": "Espresso",
+        "2": "Milk",
+        "3": "Caramel syrup",
+        "4": "Ice"
+        }'></include>
+
+        <include src="./html/_menu-content.html" locals='{
+        "id": "lemonade",
+        "images": "lemonade",
+        "title": "Lemonade “Citrus punch”",
+        "desc": "Carrot cake Oven of a true artist",
+        "calories": "250",
+        "text": "Refreshing lemonade with the addition of lime, lemon and orange juices, with a slight sourness.",
+        "1": "Lemon",
+        "2": "Lime",
+        "3": " Orange",
+        "4": "Sugar"
+        }'></include>
+
+        <include src="./html/_menu-content.html" locals='{
+        "id": "mojito",
+        "images": "mojito",
+        "title": "Mojito",
+        "desc": "Mojito",
+        "calories": "150",
+        "text": "A refreshing Cuban cocktail made with rum, fresh mint leaves, sugar syrup and soda.",
+        "1": "Lemon",
+        "2": "Lime",
+        "3": " Orange",
+        "4": "Sugar"
+        }'></include>
+      </div>
     </div>
 
     <ul class="tabs__nav menu__thumbs">
 
       <li>
         <h2>
-          Hot Appetizers
+          Chicken fillet baked in bacon
         </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/chicken.jpg" alt="Chicken fillet baked in bacon" width="159" height="159"
+            loading="lazy" />
+
+          <a href="#chicken">
+            <h3>
+              Chicken fillet baked in bacon
+            </h3>
+
+            <p>
+              A hot chicken meat appetizer fillet in smoked bakon in portions on small plates. For the convenienc..
+            </p>
+          </a>
+        </div>
       </li>
 
       <li>
-        <img src="./images/menu/appetizers/chicken.jpg" alt="Chicken fillet baked in bacon" width="159" height="159"
-          loading="lazy" />
-
         <div class="menu__descr">
-          <h3>
-            Chicken fillet baked in bacon
-          </h3>
+          <img src="./images/menu/menu/potato.jpg" alt="Сheesy potato croquettes" width="159" height="159"
+            loading="lazy" />
 
-          <p>
-            A hot chicken meat appetizer fillet in smoked bakon in portions on small plates. For the convenienc...
-          </p>
+          <a href="#potato">
+            <h3>
+              Сheesy potato croquettes
+            </h3>
+
+            <p>
+              Crispy potato croquettes made with smoked cheese, which gives them rich and rich flavour.
+            </p>
+          </a>
         </div>
-        <a href="#сhicken"></a>
-      </li>
-
-      <li>
-        <img src="./images/menu/appetizers/potato.jpg" alt="Сheesy potato croquettes" width="159" height="159"
-          loading="lazy" />
-
-        <div class="menu__descr">
-          <h3>
-            Сheesy potato croquettes
-          </h3>
-
-          <p>
-            Crispy potato croquettes made with smoked cheese, which gives them rich and rich flavour...
-          </p>
-        </div>
-        <a href="#potato"></a>
       </li>
 
       <li>
         <h2>
           Cold Appetizers
         </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/mozzarella.jpg" alt="Mozzarella Caprese" width="159" height="159"
+            loading="lazy" />
+
+          <a href="#mozzarella">
+            <h3>
+              Mozzarella Caprese
+            </h3>
+
+            <p>
+              Tender mozzarella balls mixed with beautifully chopped cherry tomatoes, fretomatoes, fresh basil and
+              olive
+              oil.
+            </p>
+          </a>
+        </div>
       </li>
 
       <li>
-        <img src="./images/menu/appetizers/mozzarella.jpg" alt="Mozzarella Caprese" width="159" height="159"
-          loading="lazy" />
+        <h2>
+          Meats
+        </h2>
 
         <div class="menu__descr">
+          <img src="./images/menu/menu/tomato.jpg" alt="Tomato cream soup with basil" width="159" height="159"
+            loading="lazy" />
 
-          <h3>
-            Mozzarella Caprese
-          </h3>
+          <a href="#tomato">
+            <h3>
+              Tomato cream soup with basil
+            </h3>
 
-          <p>
-            Tender mozzarella balls mixed with beautifully chopped cherry tomatoes, fretomatoes, fresh basil and olive
-            oil.
-          </p>
-
+            <p>
+              Delicate creamy soup based on ripe tomatoes with the addition of fresh basil for flavor.
+            </p>
+          </a>
         </div>
-        <a href="#mozzarella"></a>
       </li>
+
+      <li>
+        <div class="menu__descr">
+          <img src="./images/menu/menu/risotto.jpg" alt="Risotto with mushrooms" width="159" height="159"
+            loading="lazy" />
+
+          <a href="#risotto">
+            <h3>
+              Risotto with mushrooms
+            </h3>
+
+            <p>
+              Italian risotto prepared on the basis of arborio rice with aromatic mushrooms and natural truffles.
+            </p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <h2>
+          Vegetarian
+        </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/onion.jpg" alt="Onion soup with cheese croutons" width="159" height="159"
+            loading="lazy" />
+
+          <a href="#onion">
+            <h3>
+              Onion soup with cheese croutons
+            </h3>
+
+            <p>
+              Tender mozzarella balls mixed with beautifully chopped cherry tomatoes, fresh basil and olive oil.
+            </p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <h2>
+          Dishes
+        </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/buckwheat.jpg" alt="Buckwheat with vegetables" width="159" height="159"
+            loading="lazy" />
+
+          <a href="#buckwheat">
+            <h3>
+              Buckwheat with vegetables
+            </h3>
+
+            <p>
+              Nutritious buckwheat with a mix of fresh vegetables: carrots, peppers and onions.
+            </p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div class="menu__descr">
+          <img src="./images/menu/menu/potatoes.jpg" alt="Potato wedges with rosemary" width="159" height="159"
+            loading="lazy" />
+
+          <a href="#potatoes">
+            <h3>
+              Potato wedges with rosemary
+            </h3>
+
+            <p>
+              Crispy potato wedges with aromatic rosemary and salt.
+            </p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <h2>
+          Accompaniments
+        </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/pumpkin.jpg" alt="Baked pumpkin with honey and walnuts" width="159" height="159"
+            loading="lazy" />
+
+          <a href="#pumpkin">
+            <h3>
+              Baked pumpkin with honey and walnuts
+            </h3>
+
+            <p>
+              Tender pumpkin baked in the oven with honey and served with crunchy walnuts.
+            </p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <h2>
+          Dishes
+        </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/cake.jpg" alt="Chocolate cake Soft tender" width="159" height="159"
+            loading="lazy" />
+
+          <a href="#cake">
+            <h3>
+              Chocolate cake "Soft tender"
+            </h3>
+
+            <p>
+              Delicate chocolate sponge cake soaked in syrup, with delicate Belgian chocolate cr..
+            </p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <h2>
+          Accompaniments
+        </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/bagel.jpg" alt="Bagel with cinnamon and sugar" width="159" height="159"
+            loading="lazy" />
+
+          <a href="#bagel">
+            <h3>
+              Bagel with cinnamon and sugar
+            </h3>
+
+            <p>
+              Crispy and aromatic bagel with vanilla sugar and aromatic cinnamon.
+            </p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <h2>
+          Non-Alcoholic
+        </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/latte.jpg" alt="Ice latte" width="159" height="159" loading="lazy" />
+
+          <a href="#latte">
+            <h3>
+              Ice latte
+            </h3>
+
+            <p>
+              A refreshing drink based on espresso with the addition of milk and caramel syrup, served with ice cubes.
+            </p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <h2>
+          Accompaniments
+        </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/bagel.jpg" alt="Lemonade Citrus punch" width="159" height="159" loading="lazy" />
+
+          <a href="#lemonade">
+            <h3>
+              Lemonade "Citrus punch"
+            </h3>
+
+            <p>
+              Refreshing lemonade with the addition of lime, lemon and orange juices, with a slight sourness.
+            </p>
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <h2>
+          Alcoholic
+        </h2>
+
+        <div class="menu__descr">
+          <img src="./images/menu/menu/mojito.jpg" alt="Mojito" width="159" height="159" loading="lazy" />
+
+          <a href="#mojito"> <h3>
+             Mojito
+            </h3>
+
+            <p>
+             A refreshing Cuban cocktail made with rum, fresh mint leaves, sugar syrup and soda.
+            </p>
+          </a>
+        </div>
+      </li>
+
     </ul>
 
   </div>
