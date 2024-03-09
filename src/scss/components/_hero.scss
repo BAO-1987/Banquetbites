@@ -5,8 +5,8 @@
   $root: &;
 
   position: relative;
-  background-position: top;
-  background-size: contain;
+  background-position: 100% 0;
+  background-size: cover;
   background-repeat: no-repeat;
 
   &::before {
@@ -39,13 +39,6 @@
       justify-content: center;
     }
 
-    // @include media(tablet) {
-    //   background-size: cover;
-    // }
-
-    // @include media(mobile-m) {
-    //   padding: 20px;
-    // }
   }
 
   &__descr {
@@ -68,19 +61,11 @@
     }
   }
 
-  // @include media(desktop-xl) {
-  //   background-size: cover;
-  // }
 
   @include media(desktop) {
     background-size: cover;
   }
 
-  // @include media(tablet) {
-  //   &__inner {
-  //     min-height: 442px;
-  //   }
-  // }
 
   @include media(mobile-m) {
     .btn {
@@ -94,16 +79,15 @@
 
   &--about,
   &--services,
-  &--gallery {
+  &--gallery,
+  &--menu {
     &::before {
       background: var(--gradient-second);
       width: 43%;
       opacity: 0.79;
 
       @include media(tablet) {
-        // background-color: var(--color-white);
         width: 100%;
-        // opacity: 0.8;
       }
     }
 
@@ -115,18 +99,24 @@
       margin: 0;
     }
   }
-
   &--services {
     margin-bottom: clamp(32px, vw(64), 64px);
-    
+  }
+
+  &--services,
+  &--menu {
     #{$root}__inner {
       padding: 0;
       justify-content: center;
     }
   }
+
+  &--menu {
+    margin-bottom: clamp(32px, vw(48), 48px);
+  }
+
   &--gallery {
-    // margin-bottom: 48px;
-     #{$root}__inner {
+    #{$root}__inner {
       justify-content: center;
       padding: 0;
     }

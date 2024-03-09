@@ -2,9 +2,6 @@
 @use "../utils/mixins/" as *;
 
 .tabs {
-  padding: 2rem  0;
-
-
   &__nav {
     .selected {
       &::before {

@@ -2,9 +2,16 @@
 @use "../utils/mixins/" as *;
 
 .slider {
+  $root: &;
+
   overflow: hidden;
   padding: clamp(16px, vw(32), 32px) 0 clamp(16px, vw(48), 48px);
 
+  &--seasons {
+    #{$root}__list {
+      padding-bottom: 8px;
+    }
+  }
   &__list {
     padding: clamp(16px, vw(48), 48px) 0;
   }
@@ -18,7 +25,8 @@
   &__content {
     position: absolute;
     right: clamp(5px, vw(101), 101px);
-    top: clamp(5px, vw(65), 65px);
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: var(--radius-big);
     padding: clamp(16px, vw(48), 48px) clamp(16px, vw(52), 52px);
     width: 100%;
@@ -30,14 +38,13 @@
       font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
     }
 
-    @include media(mobile-l) {
-      margin: 0 auto;
-      inset: 0;
-    }
 
     @include media(mobile-m) {
+      margin: 0 auto;
+      inset: 0;
       position: relative;
       max-width: 100%;
+      transform: none;
     }
   }
 

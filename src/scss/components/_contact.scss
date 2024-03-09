@@ -2,8 +2,27 @@
 @use "../utils/mixins/" as *;
 
 .contact {
+  $root: &;
+
   padding: clamp(16px, vw(64), 64px) 0;
   background-color: var(--color-white);
+
+  &__information {
+    margin: 0 auto;
+    max-width: 1010px;
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
+    }
+
+    @include media(tablet) {
+      h2 {
+        margin: 0 auto 18px;
+        text-align: center;
+      }
+    }
+  }
 
   &__inner {
     border-radius: var(--radius-big);
@@ -26,29 +45,40 @@
       align-items: center;
       justify-content: center;
     }
+
+    h2 {
+      color: var(--color-white);
+    }
   }
-    
+
   &__list {
-   display: flex;
-   justify-content: center;
-    margin-bottom: clamp(20px, vw(48), 48px);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: clamp(20px, vw(97), 97px);
     gap: 24px;
 
-    @include media(mobile-l) {
-      grid-template-columns: 1fr;
+    @include media(tablet) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 
   &__item {
+    &:not(:last-child) {
+      margin-right: clamp(10px, vw(20), 20px);
+    }
   }
 
   &__link {
     display: flex;
     align-items: center;
     font-size: clamp(14px, 0.6964rem + 0.8929vi, 24px);
-    line-height: 1.2;
+    line-height: 1.17;
+    white-space: nowrap;
     color: var(--color-blue-400);
-    gap: clamp(10px, vw(24), 24px);
+    opacity: 0.86;
+    gap: 8px;
 
     &::before {
       content: "";
@@ -87,7 +117,6 @@
       }
     }
   }
-
 
   &__form {
     border-radius: var(--radius-big);
@@ -134,37 +163,13 @@
       align-items: center;
       justify-content: center;
     }
+
+    .contact__link {
+      font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
+    }
   }
 
-  // &__link {
-  //   display: flex;
-  //   align-items: center;
-  //   color: var(--color-blue-400);
-  //   gap: 10px;
-
-  //   &::before {
-  //     content: "";
-  //     position: relative;
-  //     width: 32px;
-  //     height: 32px;
-  //     background-image: url("../images/icons/email.svg");
-  //     background-position: 0 0;
-  //     background-size: cover;
-  //     background-repeat: no-repeat;
-  //   }
-
-  //   h2 {
-  //     margin-bottom: 0;
-  //     color: var(--color-white);
-
-  //     @include media(tablet) {
-  //       margin-bottom: 1rem;
-  //     }
-  //   }
-  // }
-
-  h2 {
-    margin-bottom: 0;
-    color: var(--color-white);
+  &--information {
+    padding-top: 39px;
   }
 }

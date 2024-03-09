@@ -52,6 +52,7 @@
   }
 
   &--menu {
+    padding: clamp(20px, vw(64), 64px) 0;
     background-color: var(--color-white);
   }
 

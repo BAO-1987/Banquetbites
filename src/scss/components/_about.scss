@@ -26,10 +26,20 @@
     }
 
     #{$root}__inner {
-
       @include media(mobile-l) {
-       flex-direction: column-reverse;
-       gap: 24px;
+        flex-direction: column-reverse;
+        gap: 24px;
+      }
+    }
+  }
+
+  &--menu {
+    #{$root}__content {
+      display: flex;
+     gap: 36px;
+
+      p {
+        margin: 0;
       }
     }
   }
@@ -85,28 +95,6 @@
       display: none;
     }
   }
-
-  // &--home {
-  //   p {
-  //     margin-bottom: clamp(16px, vw(48), 48px);
-  //   }
-  // }
-
-  // &--services {
-  //   #{$root}__content {
-  //     max-width: 596px;
-  //     padding: clamp(16px, vw(24), 24px);
-  //     background-color: var(--color-white);
-
-  //     @include media(mobile-l) {
-  //       max-width: 100%;
-  //     }
-  //   }
-
-  //   #{$root}__inner {
-  //     margin-bottom: clamp(30px, vw(88), 88px);
-  //   }
-  // }
 
   h3 {
     margin-bottom: 32px;

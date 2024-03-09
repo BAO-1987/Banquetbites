@@ -1,6 +1,6 @@
-<section class="menu">
+<section class="menu" id="menu">
 
-  <ul class="menu__nav">
+  <ul class="menu__nav is-scrolling">
     <li>
       <a class="btn" href="#appetizers">
         Appetizers
@@ -35,9 +35,7 @@
 
     <div class="tabs__panels">
 
-      <div class="menu__category" id="appetizers">
-
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "chicken",
         "images": "chicken",
         "title": "Chicken fillet baked in bacon",
@@ -50,7 +48,7 @@
         "4": "Soy sauce"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "potato",
         "images": "potato",
         "title": "Potato croquettes with smoked cheese",
@@ -63,7 +61,7 @@
         "4": "Bread crumbs"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "mozzarella",
         "images": "mozzarella",
         "title": "Caprese with mozzarella and cherry",
@@ -76,11 +74,8 @@
         "4": "Olive oil"
         }'></include>
 
-      </div>
 
-      <div class="menu__category" id="entrees">
-
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "tomato",
         "images": "tomato",
         "title": "Tomato cream soup with basil",
@@ -93,7 +88,7 @@
         "4": "Onion"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "risotto",
         "images": "risotto",
         "title": "Risotto with mushrooms and truffles",
@@ -106,7 +101,7 @@
         "4": "Onions"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "onion",
         "images": "onion",
         "title": "Onion soup with cheese croutons",
@@ -119,11 +114,8 @@
         "4": "Bread"
         }'></include>
 
-      </div>
 
-      <div class="menu__category" id="sides">
-
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "buckwheat",
         "images": "buckwheat",
         "title": "Buckwheat with vegetables",
@@ -136,7 +128,7 @@
         "4": "Onions"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "potatoes",
         "images": "potatoes",
         "title": "Potato wedges with rosemary",
@@ -149,7 +141,7 @@
         "4": "Salt"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "pumpkin",
         "images": "pumpkin",
         "title": "Baked pumpkin with honey and walnuts",
@@ -162,10 +154,7 @@
         "4": "Butter"
         }'></include>
 
-      </div>
-
-      <div class="menu__category" id="desserts">
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "cake",
         "images": "cake",
         "title": "Chocolate cake “Soft tender”",
@@ -178,7 +167,7 @@
         "4": "Milk"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "carrot",
         "images": "carrot",
         "title": "Carrot cake “Oven of a true artist”",
@@ -191,7 +180,7 @@
         "4": "Cream cheese"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "bagel",
         "images": "bagel",
         "title": "Bagel with cinnamon and sugar",
@@ -204,10 +193,7 @@
         "4": "Butter"
         }'></include>
 
-      </div>
-
-      <div class="menu__category" id="beverages">
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "latte",
         "images": "latte",
         "title": "Ice latte",
@@ -220,7 +206,7 @@
         "4": "Ice"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "lemonade",
         "images": "lemonade",
         "title": "Lemonade “Citrus punch”",
@@ -233,7 +219,7 @@
         "4": "Sugar"
         }'></include>
 
-        <include src="./html/_menu-content.html" locals='{
+      <include src="./html/_menu-content.html" locals='{
         "id": "mojito",
         "images": "mojito",
         "title": "Mojito",
@@ -245,14 +231,13 @@
         "3": " Orange",
         "4": "Sugar"
         }'></include>
-      </div>
     </div>
 
-    <ul class="tabs__nav menu__thumbs">
+    <ul class="tabs__nav menu__thumbs is-scrolling">
 
-      <li>
+      <li id="appetizers">
         <h2>
-          Chicken fillet baked in bacon
+          Hot Appetizers
         </h2>
 
         <div class="menu__descr">
@@ -312,7 +297,7 @@
       </li>
 
       <li>
-        <h2>
+        <h2 id="entrees">
           Meats
         </h2>
 
@@ -370,7 +355,7 @@
         </div>
       </li>
 
-      <li>
+      <li id="sides">
         <h2>
           Dishes
         </h2>
@@ -429,7 +414,7 @@
         </div>
       </li>
 
-      <li>
+      <li id="desserts">
         <h2>
           Dishes
         </h2>
@@ -485,13 +470,14 @@
             </h3>
 
             <p>
-              A refreshing drink based on espresso with the addition of milk and caramel syrup, served with ice cubes.
+              A refreshing drink based on espresso with the addition of milk and caramel syrup, served with ice
+              cubes.
             </p>
           </a>
         </div>
       </li>
 
-      <li>
+      <li id="beverages">
         <h2>
           Accompaniments
         </h2>
@@ -519,18 +505,20 @@
         <div class="menu__descr">
           <img src="./images/menu/menu/mojito.jpg" alt="Mojito" width="159" height="159" loading="lazy" />
 
-          <a href="#mojito"> <h3>
-             Mojito
+          <a href="#mojito">
+            <h3>
+              Mojito
             </h3>
 
             <p>
-             A refreshing Cuban cocktail made with rum, fresh mint leaves, sugar syrup and soda.
+              A refreshing Cuban cocktail made with rum, fresh mint leaves, sugar syrup and soda.
             </p>
           </a>
         </div>
       </li>
 
     </ul>
+
 
   </div>
 

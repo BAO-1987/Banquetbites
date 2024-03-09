@@ -8,7 +8,7 @@
   justify-content: center;
   border: 2px solid var(--color-orange-600);
   border-radius: var(--radius-main);
-  padding: 7px 16px;
+  padding: 8px 16px;
   width: 100%;
   max-width: fit-content;
   font-weight: var(--fw-800);
@@ -22,42 +22,32 @@
 
   &:hover,
   &:focus {
-    // border-color: var(--color-white);
     color: var(--color-white);
     background-color: var(--color-orange-600);
   }
 
-  // &.formsapp-button {
-  //   margin: 0;
-  //   background-color: var(--color-blue-900) !important;
+  &.formsapp-button {
+   font-family: var(--font-family-primary);
+    margin: 0;
+    background-color: var(--color-orange-600) !important;
 
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--color-blue-900) !important;
-  //     background-color: var(--color-white) !important;
-  //   }
-  // }
-
-  // &--big {
-  //   border-radius: var(--radius-main) var(--radius-big) var(--radius-big) var(--radius-main);
-  //   padding: clamp(18px, vw(29), 29px) 0;
-  //   max-width: 189px;
-  //   background-color: var(--color-orange-600);
-
-  // }
+    &:hover,
+    &:focus {
+      color: var(--color-orange-600) !important;
+      background-color: var(--color-white) !important;
+    }
+  }
 
   &--reverse {
     border-color: transparent;
-    // padding: clamp(18px, vw(29), 29px) 24px clamp(18px, vw(29), 29px) 24px;
-    // min-width: max-content;
-    // max-width: 116px;
     color: var(--color-white);
     background-color: var(--color-orange-600);
 
     &:hover,
     &:focus {
-      color: var(--color-white);
-      background-color: varvar(--color-white);
+      border-color: var(--color-orange-600);
+      color: var(--color-orange-600);
+      background-color: var(--color-white);
     }
   }
 

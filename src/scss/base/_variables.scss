@@ -19,39 +19,35 @@
   --fw-800: 800;
 
   // color
-  --color-black:#070A0B;
+  --color-black: #070a0b;
   --color-white: #fff;
-   --color-blue-400: #0D51FF;
+  --color-blue-400: #0d51ff;
   --color-violet-400: #45373d;
   --color-violet-50: #c9ada7;
-  --color-gray-400: #A8A8A8;
-  --color-gray-600:#5d5c61;
+  --color-gray-400: #a8a8a8;
+  --color-gray-600: #5d5c61;
   --color-gray-100: #f9f6f7;
   --color-orange-600: #ff9f1c;
 
   //  radius
   --radius-main: 8px;
-  // --radius-big: calc((var(--radius-main) * 2));
+  --gradient: linear-gradient(
+    270deg,
+    rgba(241, 241, 241, 0),
+    rgb(241, 241, 241) 49.746%,
+    rgb(241, 241, 241) 49.896%,
+    rgb(241, 241, 241) 100%
+  );
 
-  // bg
-//   --gradient: linear-gradient(
-//   270deg,
-//   rgba(241, 241, 241, 0.79) 0%,
-//   rgba(241, 241, 241, 0.79) 49.75%,
-//   rgba(241, 241, 241, 0.79) 49.9%,
-//   rgba(241, 241, 241, 0.79) 100%
-// );
+  --gradient-second: linear-gradient(
+    270deg,
+    rgba(241, 241, 241, 0),
+    rgba(241, 241, 241, 0.8),
+    rgb(241, 241, 241) 0.01%,
+    rgb(241, 241, 241) 100%
+  );
 
---gradient:
-  linear-gradient(270.00deg, rgba(241, 241, 241, 0),rgb(241, 241, 241) 49.746%,rgb(241, 241, 241) 49.896%,rgb(241, 241, 241) 100%);
+  --gradient-violet: linear-gradient(180deg, #c9ada7 0%, #442c13 100%);
 
-  --gradient-second: linear-gradient(270.00deg, rgba(241, 241, 241, 0),rgba(241, 241, 241, 0.8),rgb(241, 241, 241) 0.01%,rgb(241, 241, 241) 100%);
-
---gradient-violet: linear-gradient(180deg, #c9ada7 0%, #442c13 100%);
-
-
-// --gradient: linear-gradient(270deg, #f1f1f1 0%, #f1f1f1 49.75%, #f1f1f1 49.9%, #f1f1f1 100%);
-
-
---shadow: 0 0 50px 0 rgba(201, 173, 167, 0.7);
+  --shadow: 0 0 50px 0 rgba(201, 173, 167, 0.7);
 }

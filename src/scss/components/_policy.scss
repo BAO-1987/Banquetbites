@@ -4,8 +4,7 @@
 .policy {
   &__content {
     border-radius: var(--radius-big);
-    padding: clamp(16px, vw(48), 48px);
-    background-color: var(--color-white);
+    padding: clamp(16px, vw(24), 24px);
 
     &:not(:last-child) {
       margin-bottom: 16px;
