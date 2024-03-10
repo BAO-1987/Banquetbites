@@ -29,6 +29,7 @@ tabsContainer?.addEventListener('click', e => {
 
 });
 
+
 // function switchTab(newTab) {
 //   const activePanelId = newTab.getAttribute('href');
 //   const activePanel = tabsContainer.querySelector(activePanelId);

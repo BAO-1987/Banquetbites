@@ -5,7 +5,8 @@
 @use "../utils/mixins/"as*;
 
 .hidden {
-  display: none !important;
+  opacity: 0;
+  
 }
 
 .sr-only {
