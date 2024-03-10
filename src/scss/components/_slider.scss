@@ -12,6 +12,7 @@
       padding-bottom: 8px;
     }
   }
+
   &__list {
     padding: clamp(16px, vw(48), 48px) 0;
   }
@@ -38,6 +39,12 @@
       font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
     }
 
+    @include media(tablet) {
+      padding: 15px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+    }
 
     @include media(mobile-m) {
       margin: 0 auto;

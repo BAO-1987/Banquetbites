@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   z-index: 10;
-  padding: 20px 0;
+  padding: 21px 0;
   width: 100%;
   background-color: var(--color-white);
   transition-property: transform;
@@ -19,7 +19,7 @@
   }
 
   &.hide {
-    transform: translateY(-200%);
+    transform: translateY(-100%);
   }
 
   @include media(tablet) {
@@ -47,7 +47,9 @@
     }
 
     .nav__item {
-      margin-right: 0;
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 }

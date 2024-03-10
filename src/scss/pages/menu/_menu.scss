@@ -2,16 +2,16 @@
 @use "../../utils/mixins/" as *;
 
 .menu {
-  margin-bottom: 17px;
+  margin-bottom: 30px;
 
   &__nav {
     display: flex;
     overflow: auto hidden;
-    margin-bottom: 38px;
+    margin-bottom: 30px;
 
     li {
       &:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 22px;
       }
     }
 
@@ -22,30 +22,9 @@
 
   &__full {
     overflow: hidden;
-    max-width: 760px;
     width: 100%;
+    max-width: 760px;
   }
-
-  // &__thumbs {
-  //   max-width: 450px;
-  //   width: 100%;
-  //   display: flex;
-  //   height: 792px;
-  //   gap: 30px;
-
-  //   .swiper-slide {
-  //     cursor: pointer;
-
-  //     &.swiper-slide-thumb-active {
-  //       background-color: var(--color-white);
-  //     }
-  //   }
-
-  //   @include media(mobile-l) {
-  //    height: 100px;
-  //   }
-
-  // }
 
   &__slider {
     display: flex;
@@ -65,10 +44,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-height: 792px;
     max-width: 431px;
-    max-height: inherit;
-
-    height: 792px;
     gap: 30px;
 
     .swiper-slide {
@@ -80,43 +57,14 @@
     }
 
     li {
-      height: 206px;
       border-radius: var(--radius-big);
       padding: clamp(5px, vw(24), 24px);
-
-      img {
-        margin-right: 24px;
-        border-radius: 24px;
-        width: 159px;
-        height: 159px;
-      }
-
-      h3 {
-        max-width: 200px;
-        font-size: 20px;
-      }
-
-      p {
-        font-size: 16px;
-        line-height: 1.5;
-      }
+      height: 206px;
 
       @include media(mobile-l) {
-        h2,
-        h3,
-        p {
+        h2 {
           display: none;
         }
-
-        img {
-          margin-right: 0;
-          width: 75px;
-          height: 75px;
-        }
-
-        height: 70px !important;
-        width: 70px !important;
-        padding: 0;
       }
     }
 
@@ -127,7 +75,6 @@
     @include media(mobile-l) {
       height: inherit;
       max-width: 100%;
-      flex-wrap: wrap !important;
       gap: 15px;
     }
   }
@@ -136,6 +83,17 @@
     display: flex;
     justify-content: space-between;
 
+    h3 {
+      margin-bottom: 10px;
+      font-size: 20px;
+
+      @include media(mobile-l) {
+        margin-bottom: 0;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+
     img {
       margin-right: 24px;
       border-radius: 24px;
@@ -143,19 +101,30 @@
       height: 159px;
     }
 
-    h3 {
-      max-width: 200px;
-      font-size: 20px;
-    }
-
     p {
       font-size: 16px;
       line-height: 1.5;
     }
 
-    h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
+    @include media(mobile-l) {
+      padding: 10px;
+      height: 150px !important;
+
+      h2,
+      p {
+        display: none;
+      }
+
+      img {
+        margin: 0 0 15px;
+        width: 75px;
+        min-height: 75px;
+      }
+    }
+
+    @include media(mobile-l) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -226,15 +195,6 @@
       }
     }
   }
-
-  // &__slider-nav {
-  //   display: flex;
-  //   flex-direction: column;
-
-  //   .swiper-slide {
-  //     cursor: pointer;
-  //   }
-  // }
 
   h2 {
     margin-bottom: 6px;

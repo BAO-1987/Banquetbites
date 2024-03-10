@@ -42,21 +42,6 @@
     }
   }
 
-  &--main,
-  &--menu {
-    #{$root}__item {
-      img {
-        max-height: 100%;
-      }
-    }
-  }
-
-  &--menu {
-    padding: clamp(20px, vw(64), 64px) 0;
-    background-color: var(--color-white);
-  }
-
-
   &__content {
     display: flex;
     flex-direction: column;
@@ -65,7 +50,14 @@
     border-radius: var(--radius-big);
     padding: clamp(16px, vw(32), 32px) 0;
     height: 100%;
-    gap: 32px;
+
+    h3 {
+      margin-bottom: clamp(16px, vw(32), 32px);
+    }
+
+    p {
+      margin-bottom: clamp(16px, vw(32), 32px);
+    }
 
     ul {
       li {
@@ -80,9 +72,8 @@
           top: 15px;
           width: 4px;
           height: 4px;
-          background-color:var(--color-black);
+          background-color: var(--color-black);
         }
-
       }
     }
 
@@ -90,5 +81,20 @@
       height: max-content;
       max-width: 100%;
     }
+  }
+
+  &--main,
+  &--menu {
+    #{$root}__item {
+      img {
+        max-height: 100%;
+        aspect-ratio: 16/9;
+      }
+    }
+  }
+
+  &--menu {
+    padding: clamp(20px, vw(64), 64px) 0 clamp(20px, vw(40), 40px);
+    background-color: var(--color-white);
   }
 }

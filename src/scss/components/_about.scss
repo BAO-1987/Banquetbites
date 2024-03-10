@@ -36,7 +36,7 @@
   &--menu {
     #{$root}__content {
       display: flex;
-     gap: 36px;
+      gap: 36px;
 
       p {
         margin: 0;
@@ -72,7 +72,7 @@
   &__descr {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
   }
 
   &__image {
@@ -87,6 +87,10 @@
 
     @include media(mobile-l) {
       border-radius: var(--radius-big);
+
+      img {
+        aspect-ratio: 16/9;
+      }
     }
   }
 

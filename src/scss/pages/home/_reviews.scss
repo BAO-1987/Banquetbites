@@ -15,7 +15,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: clamp(24px, vw(56), 56px);
 
-    @include media(mobile-l) {
+    @include media(mobile-m) {
       grid-template-columns: 1fr;
     }
   }
@@ -23,7 +23,7 @@
   &__item {
     display: flex;
     border-radius: var(--radius-big);
-    padding:  clamp(20px, vw(32), 32px) clamp(20px, vw(34), 34px) 24px;
+    padding: clamp(20px, vw(32), 32px) clamp(20px, vw(34), 34px) 24px;
     height: 100%;
     box-shadow: var(--shadow);
     background-color: var(--color-white);
@@ -32,6 +32,10 @@
     img {
       width: 70px;
       height: 70px;
+    }
+
+    @include media(mobile-l) {
+      flex-direction: column;
     }
   }
 
@@ -55,7 +59,7 @@
   }
 
   h2 {
-    margin-bottom: 52px;
+    margin-bottom: clamp(20px, vw(52), 52px);
     color: var(--color-white);
   }
 }

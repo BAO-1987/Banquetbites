@@ -48,7 +48,7 @@
 
     span {
       display: block;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       font-weight: var(--fw-800);
       font-size: 48px;
       line-height: 0.58;
@@ -58,14 +58,11 @@
     &:last-child {
       @include media(mobile-l) {
         grid-column: 2 span;
-        margin: 0 auto;
-        max-width: 400px;
+        max-width: 100%;
       }
 
       @include media(mobile-m) {
         grid-column: auto;
-        margin: 0;
-        max-width: 100%;
       }
     }
   }
@@ -88,7 +85,7 @@
       grid-column: auto;
       margin: 0;
       max-width: 100%;
-      
+
       &::before {
         content: none;
       }

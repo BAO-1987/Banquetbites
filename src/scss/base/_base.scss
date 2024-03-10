@@ -5,11 +5,12 @@ html,
 body {
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
-  scroll-padding: cacl(var(--header-height)
-   + 15px);
+  scroll-padding: cacl(var(--header-height) + 15px);
 }
 
 .page {
+  --radius-big: 32px;
+
   height: var(--vh);
   font-family: var(--font-family-primary);
   font-weight: var(--fw-300);
@@ -20,11 +21,6 @@ body {
   color: var(--color-black);
   background-color: var(--color-gray-100);
   font-optical-sizing: auto;
-  --radius-big: 32px;
-
-  @include media(mobile-l) {
-    --radius-big: 16px;
-  }
 
   &__body {
     min-width: 320px;
@@ -33,6 +29,10 @@ body {
 
   &.open {
     overflow: hidden;
+  }
+
+  @include media(mobile-l) {
+    --radius-big: 16px;
   }
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .wrapper {
- max-width: 1042px;
+  max-width: 1042px;
 }
 
 .site-container {
@@ -77,12 +77,11 @@ body {
 }
 
 .is-scrolling {
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  scroll-snap-align: start;
   scrollbar-color: var(--color-orange-600) var(--color-white);
   scrollbar-width: thin;
-  scroll-snap-align: start;
-  overflow-y: scroll;
-  padding-right: 10px;
-  padding-bottom: 10px;
 
   &::-webkit-scrollbar {
     width: 4px;
@@ -101,39 +100,3 @@ body {
     background-color: var(--color-orange-600);
   }
 }
-
-// #form-request {
-//   position: fixed;
-//   z-index: 10;
-//   margin: auto;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition-property: opacity, visibility;
-//   transition-duration: 0.2s;
-//   inset: 0;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     background-color: var(--color-black);
-//     opacity: 0.3;
-//     inset: 0;
-//   }
-
-//   iframe {
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     z-index: 1;
-//     margin: 30px auto;
-//     border: none;
-//     width: 90%;
-//     height: calc(var(--vh) - 60px);
-//     max-width: 980px;
-//   }
-
-//   &.open {
-//     opacity: 1;
-//     visibility: visible;
-//   }
-// }

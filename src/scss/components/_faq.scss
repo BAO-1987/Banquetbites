@@ -8,7 +8,7 @@
     background-color: var(--color-white);
 
     &:not(:last-child) {
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
   }
 
@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: clamp(16px, vw(24), 24px) clamp(16px, vw(32), 32px);
+    padding: 25px clamp(16px, vw(32), 32px);
     font-weight: var(--fw-800);
     font-size: 20px;
     line-height: 1.2;
@@ -57,7 +57,7 @@
     }
 
     + div {
-       padding: 0 clamp(16px, vw(24), 24px) clamp(16px, vw(32), 32px);
+      padding: 0 30px 5px;
     }
   }
 

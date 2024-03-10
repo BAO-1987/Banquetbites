@@ -46,14 +46,21 @@
     &:last-child {
       @include media(tablet) {
         grid-column: 2 span;
-        margin: 0 auto;
-        max-width: 400px;
+        max-width: 100%;
+
+        img {
+          margin: 0 auto 32px;
+          max-width: 300px;
+        }
       }
 
       @include media(mobile-m) {
         grid-column: auto;
-        margin: 0;
-        max-width: 100%;
+
+        img {
+          margin: 0 auto 32px;
+          max-width: 100%;
+        }
       }
     }
   }

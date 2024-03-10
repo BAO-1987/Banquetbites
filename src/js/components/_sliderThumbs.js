@@ -16,9 +16,9 @@ function createThumbsSlider(selector) {
     watchSlidesProgress: true,
 
      breakpoints: {
-       375: {
+       360: {
           direction: 'horizontal',
-          spaceBetween: 15,
+          spaceBetween: 5,
        },
 
        768: {

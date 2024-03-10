@@ -57,10 +57,14 @@
   }
 
   .nav__list {
+    @include media(mobile-sm) {
+      flex-direction: column;
+    }
+  }
+
+  .nav__link {
     @include media(mobile-m) {
-      display: block;
-      column-count: 2;
-      margin: 0 auto;
+      font-size: 16px;
     }
   }
 

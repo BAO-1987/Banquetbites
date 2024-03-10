@@ -34,7 +34,7 @@
     z-index: 1;
 
     @include media(tablet) {
-      min-height: 450px;
+      min-height: 380px;
       background-size: cover;
       justify-content: center;
     }

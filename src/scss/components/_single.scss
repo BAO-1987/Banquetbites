@@ -22,6 +22,11 @@
   &__head {
     display: flex;
     gap: 64px;
+
+    @include media(mobile-l) {
+      flex-direction: column;
+      gap: 24px;
+    }
   }
 
   &__content {
@@ -42,7 +47,6 @@
     img {
       overflow: hidden;
       border-radius: var(--radius-big);
-      // max-height: 375px;
 
       &:not(:last-child) {
         margin-bottom: clamp(20px, vw(88), 88px);

@@ -29,18 +29,22 @@
 
     @include media(mobile-l) {
       position: relative;
+
+      img {
+        max-height: 350px;
+      }
     }
   }
 
   &__box {
     position: absolute;
-    top: clamp(5px, vw(56), 56px);
-    right: 107px;
+    top: clamp(5px, vw(60), 60px);
+    right: 100px;
     z-index: 1;
     border-radius: var(--radius-big);
     padding: clamp(20px, vw(52), 52px) clamp(20px, vw(48), 48px);
     width: 100%;
-    max-width: 484px;
+    max-width: 493px;
     background-color: var(--color-white);
 
     h2 {
@@ -49,7 +53,11 @@
     }
 
     @include media(tablet) {
-      top: 5px;
+      top: 30px;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
 
     @include media(mobile-l) {
@@ -136,14 +144,11 @@
    &:last-child {
      @include media(tablet) {
       grid-column: 2 span;
-      margin: 0 auto;
-      max-width: 400px;
+      max-width: 100%;
     }
 
     @include media(mobile-m) {
       grid-column: auto;
-      margin: 0;
-      max-width: 100%;
     }
    }
   }

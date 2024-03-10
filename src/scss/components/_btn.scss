@@ -8,7 +8,7 @@
   justify-content: center;
   border: 2px solid var(--color-orange-600);
   border-radius: var(--radius-main);
-  padding: 8px 16px;
+  padding: 6px 15px;
   width: 100%;
   max-width: fit-content;
   font-weight: var(--fw-800);
@@ -44,15 +44,14 @@
   }
 
   &--reverse {
-    border-color: transparent;
-    color: var(--color-white);
-    background-color: var(--color-orange-600);
+    border-color: var(--color-orange-600);
+    color: var(--color-orange-600);
+    background-color: var(--color-white);
 
     &:hover,
     &:focus {
-      border-color: var(--color-orange-600);
-      color: var(--color-orange-600);
-      background-color: var(--color-white);
+      color: var(--color-white);
+      background-color: var(--color-orange-600);
     }
   }
 

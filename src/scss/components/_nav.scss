@@ -18,15 +18,15 @@
     display: flex;
     align-items: center;
     margin-right: clamp(16px, vw(48), 48px);
+
+    @include media(tablet) {
+      margin-right: 0;
+    }
   }
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: clamp(10px, vw(32), 32px);
-
-      @include media(tablet) {
-        margin-right: 0;
-      }
+      margin-right: clamp(10px, vw(33), 33px);
     }
 
     @include media(tablet) {
@@ -51,28 +51,5 @@
   &__btns {
     display: flex;
     gap: 16px;
-
-    @include media(tablet) {
-      flex-direction: column;
-    }
   }
-
-  // .btn {
-  //   @include media(tablet) {
-  //     margin: 0 auto;
-  //   }
-  // }
-
-  // .btn--reverse {
-  //   margin-right: 8px !important;
-
-  //   @include media(tablet) {
-  //     margin: 0 auto 20px !important;
-  //     background-color: var(--color-white) !important;
-
-  //     &:hover {
-  //       background-color: var(--color-blue-900) !important;
-  //     }
-  //   }
-  // }
 }
