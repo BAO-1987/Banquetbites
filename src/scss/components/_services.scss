@@ -3,6 +3,7 @@
 
 .services {
   $root: &;
+  background-color: var(--color-white);
 
   &__grid {
     display: grid;
